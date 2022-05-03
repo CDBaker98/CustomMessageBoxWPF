@@ -13,54 +13,43 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace CustomMessageBox
-{
+namespace CustomMessageBox {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
-    {
-        public MainWindow()
-        {
+    public partial class MainWindow : Window {
+        public MainWindow() {
             InitializeComponent();
         }
 
-        private void btnOk_Click(object sender, RoutedEventArgs e)
-        {
+        private void btnOk_Click(object sender, RoutedEventArgs e) {
             new MessageBoxCustom("You have clicked button Ok.", MessageType.Info, MessageButtons.Ok).ShowDialog();
         }
 
-        private void btnOkCancel_Click(object sender, RoutedEventArgs e)
-        {
+        private void btnOkCancel_Click(object sender, RoutedEventArgs e) {
             bool? Result = new MessageBoxCustom("Are you sure, You want to close application ?", MessageType.Confirmation, MessageButtons.OkCancel).ShowDialog();
         }
 
-        private void btnYesNo_Click(object sender, RoutedEventArgs e)
-        {
+        private void btnYesNo_Click(object sender, RoutedEventArgs e) {
             bool? Result = new MessageBoxCustom("Are you sure, You want to close application ?", MessageType.Confirmation, MessageButtons.YesNo).ShowDialog();
         }
 
-        private void btnClose_Click(object sender, RoutedEventArgs e)
-        {
+        private void btnClose_Click(object sender, RoutedEventArgs e) {
             bool? Result = new MessageBoxCustom("Are you sure, You want to close application ?", MessageType.Confirmation, MessageButtons.YesNo).ShowDialog();
-            if (Result.Value)
-            {
+            if (Result.Value) {
                 Application.Current.Shutdown();
             }
         }
 
-        private void btnOkWarning_Click(object sender, RoutedEventArgs e)
-        {
+        private void btnOkWarning_Click(object sender, RoutedEventArgs e) {
             bool? Result = new MessageBoxCustom("Warning message from the application.", MessageType.Warning, MessageButtons.Ok).ShowDialog();
         }
 
-        private void btnOkError(object sender, RoutedEventArgs e)
-        {
+        private void btnOkError(object sender, RoutedEventArgs e) {
             bool? Result = new MessageBoxCustom("Error message from the application.", MessageType.Error, MessageButtons.Ok).ShowDialog();
         }
 
-        private void btnOkSuccessClick(object sender, RoutedEventArgs e)
-        {
+        private void btnOkSuccessClick(object sender, RoutedEventArgs e) {
             bool? Result = new MessageBoxCustom("Operation Successfully Done.", MessageType.Success, MessageButtons.Ok).ShowDialog();
         }
     }

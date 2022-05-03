@@ -22,7 +22,7 @@ namespace CustomMessageBox
         public MessageBoxCustom(string Message, MessageType Type, MessageButtons Buttons)
         {
             InitializeComponent();
-            txtMessage.Content = Message;
+            txtMessage.Text = Message;
             switch (Type)
             {
                 case MessageType.Info:

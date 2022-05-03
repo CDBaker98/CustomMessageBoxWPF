@@ -1,0 +1,9 @@
+
+CustomMessageBox/.vs/CustomMessageBox/v16/.suo
+*.exe
+*.pdb
+*.cache
+*.resources
+*.baml
+CustomMessageBox/obj/Debug/MessageBoxCustom.g.cs
+CustomMessageBox/obj/Debug/MessageBoxCustom.g.i.cs

@@ -12,18 +12,23 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <materialDesign:Card x:Name="cardHeader" Padding="10" materialDesign:ShadowAssist.ShadowDepth="Depth4"
+        <materialDesign:Card x:Name="cardHeader" materialDesign:ShadowAssist.ShadowDepth="Depth4"
                              Background="{DynamicResource PrimaryHueDarkBrush}" Foreground="{DynamicResource PrimaryHueDarkForegroundBrush}">
-            <TextBlock x:Name="txtTitle" HorizontalAlignment="Center" VerticalAlignment="Stretch" Style="{DynamicResource MaterialDesignTitleTextBlock}" FontSize="20" >Custom MessageBox Demo</TextBlock>
-        </materialDesign:Card>
+            <Grid>
+                <TextBlock x:Name="txtTitle" Text="Custom MessageBox Demo"
+                           HorizontalAlignment="Center" VerticalAlignment="Center"
+                           Style="{DynamicResource MaterialDesignTitleTextBlock}" FontSize="20"/>
 
-        <Button x:Name="btnClose" Click="btnClose_Click" Width="30" Height="30" HorizontalAlignment="Right" Margin="5" VerticalAlignment="Top"
-                    Background="White" Foreground="{DynamicResource PrimaryHueDarkBrush}" Style="{StaticResource MaterialDesignFloatingActionDarkButton}">
-            <materialDesign:PackIcon Kind="Close"/>
-        </Button>
+                <Button x:Name="btnClose" Click="btnClose_Click" Width="30" Height="30"
+                        HorizontalAlignment="Right" VerticalAlignment="Top" Margin="5"
+                        Background="White" Foreground="Black" Style="{StaticResource MaterialDesignFloatingActionDarkButton}">
+                    <materialDesign:PackIcon Kind="Close"/>
+                </Button>
+            </Grid>
+        </materialDesign:Card>
 
         <Grid Margin="5,20,5,5" Grid.Row="1" VerticalAlignment="Bottom">
             <Grid.RowDefinitions>
@@ -33,15 +38,21 @@
             </Grid.RowDefinitions>
 
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                <Button x:Name="btnOkInfo" Click="btnOk_Click" Style="{StaticResource MaterialDesignRaisedButton}" Margin="5" Width="100" Content="OK Info"/>
-                <Button x:Name="btnOkWarning" Click="btnOkWarning_Click" Style="{StaticResource MaterialDesignRaisedButton}" Margin="5" Width="110" Content="OK Warning"/>
-                <Button x:Name="btnOkError1" Click="btnOkError" Style="{StaticResource MaterialDesignRaisedButton}" Margin="5" Width="110" Content="OK Error"/>
-                <Button x:Name="btnOkSuccess1" Click="btnOkSuccessClick" Style="{StaticResource MaterialDesignRaisedButton}" Margin="5" Width="110" Content="OK Success"/>
+                <Button x:Name="btnOkInfo" Click="btnOkInfo_Click" Margin="5" Width="100" Content="OK Info"
+                        Style="{StaticResource MaterialDesignRaisedButton}"/>
+                <Button x:Name="btnOkWarning" Click="btnOkWarning_Click" Margin="5" Width="110" Content="OK Warning"
+                        Style="{StaticResource MaterialDesignRaisedButton}"/>
+                <Button x:Name="btnOkError1" Click="btnOkError" Margin="5" Width="110" Content="OK Error"
+                        Style="{StaticResource MaterialDesignRaisedButton}"/>
+                <Button x:Name="btnOkSuccess1" Click="btnOkSuccessClick" Margin="5" Width="110" Content="OK Success"
+                        Style="{StaticResource MaterialDesignRaisedButton}"/>
             </StackPanel>
 
-            <Button x:Name="btnOkCancel" Click="btnOkCancel_Click" Style="{StaticResource MaterialDesignRaisedButton}" Margin="5" Width="150" Content="OK And Cancel" Grid.Row="1"/>
-            
-            <Button x:Name="btnYesNo" Click="btnYesNo_Click" Style="{StaticResource MaterialDesignRaisedButton}" Margin="5" Width="150" Content="Yes and No" Grid.Row="2"/>
+            <Button x:Name="btnOkCancel" Click="btnOkCancel_Click" Margin="5" Width="150" Content="OK And Cancel" Grid.Row="1"
+                    Style="{StaticResource MaterialDesignRaisedButton}"/>
+
+            <Button x:Name="btnYesNo" Click="btnYesNo_Click" Margin="5" Width="150" Content="Yes and No" Grid.Row="2"
+                    Style="{StaticResource MaterialDesignRaisedButton}"/>
         </Grid>
     </Grid>
 </Window>

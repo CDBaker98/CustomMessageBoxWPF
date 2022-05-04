@@ -17,7 +17,7 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <Grid Grid.Row="1"  Grid.ColumnSpan="2" Margin="10,20,10,10">
+        <Grid Grid.Row="1" Margin="10,20,10,10">
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto"/>
                 <RowDefinition/>
@@ -51,23 +51,16 @@
 
         </Grid>
 
-        <materialDesign:Card x:Name="cardHeader" Margin="0" materialDesign:ShadowAssist.ShadowDepth="Depth4"
-                             Background="{DynamicResource PrimaryHueDarkBrush}" Foreground="{DynamicResource PrimaryHueDarkForegroundBrush}"
-                             Visibility="Visible" UniformCornerRadius="0">
+        <materialDesign:Card x:Name="cardHeader" materialDesign:ShadowAssist.ShadowDepth="Depth4"
+                             Background="{DynamicResource PrimaryHueDarkBrush}" Foreground="{DynamicResource PrimaryHueDarkForegroundBrush}">
             <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition Width="auto"/>
-                </Grid.ColumnDefinitions>
-
                 <TextBlock x:Name="txtTitle" Text="Message Title"
-                       HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="2"
-                       Style="{DynamicResource MaterialDesignTitleTextBlock}" FontSize="20">
-                </TextBlock>
+                           HorizontalAlignment="Center" VerticalAlignment="Center"
+                           Style="{DynamicResource MaterialDesignTitleTextBlock}" FontSize="20"/>
 
-                <Button x:Name="btnClose" Click="btnClose_Click" Width="30" Height="30" Background="White" Foreground="Black"
-                        Style="{StaticResource MaterialDesignFloatingActionDarkButton}"
-                        Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="5">
+                <Button x:Name="btnClose" Click="btnClose_Click" Width="30" Height="30"
+                        HorizontalAlignment="Right" VerticalAlignment="Top" Margin="5"
+                        Background="White" Foreground="Black" Style="{StaticResource MaterialDesignFloatingActionDarkButton}">
                     <materialDesign:PackIcon Kind="Close" />
                 </Button>
             </Grid>
